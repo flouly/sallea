@@ -76,7 +76,7 @@ if(!empty($_POST)){
 
 
 /*********************Affichage****************************/
-require_once('inc/haut.php');
+require_once('inc/haut.inc.php');
 
 echo $contenu;
 if(!$inscription) :
@@ -103,4 +103,4 @@ if(!$inscription) :
 
 <?php
 endif;
-require_once('inc/bas.php');
+require_once('inc/bas.inc.php');

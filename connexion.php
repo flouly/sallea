@@ -1,9 +1,10 @@
 <?php
 require_once('inc/init.inc.php');
 
-
 if(isset($_GET['action'])  && $_GET['action'] == 'deconnexion'){
    session_destroy();
+   header('location:index.php');
+   exit();
 }
 
 

@@ -9,6 +9,8 @@ session_start();
 
 // Declaration des variables du site
 $contenu = '';
+$contenu_gauche = '';
+$contenu_droit = '';
 
 
 DEFINE('RACINE', '/../');
