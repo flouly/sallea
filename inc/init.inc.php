@@ -11,6 +11,8 @@ session_start();
 $contenu = '';
 
 
+DEFINE('RACINE', '/../');
+
 //autres inclusions
 require_once('fonction.inc.php');
 ?>

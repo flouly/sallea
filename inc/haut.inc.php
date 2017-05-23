@@ -18,30 +18,34 @@
                 echo '<li><a href="#">Contact</a></li>';
                 
                 if(internauteEstConnecte()) {
-                    echo 
+                   /* echo 
                     '<li><select name="membre" id="membre">
                     
                     <option value="NULL">Espace membre</option>
                     <option value="connexion"><a href="sallea/connexion.php?action=deconnexion">Se deconnecter</a></option>
-                    <option value="profil"><a href="sallea/profil.php">profil</a>Profil</option>
+                    <option value="profil"><a href="sallea/profil.php">Profil</a></option>
                     
-                    </select></li>';   
+                    </select></li>'; */
 
+                    echo '<li><a href="'. RACINE .'connexion.php?action=deconnexion">Se deconnecter</a></li>';  
+                    echo '<li><a href="'. RACINE .'profil.php">Profil</a></li>'; 
                 } else{
-                    echo 
+                    /*echo 
                     '<li><select name="membre" id="membre">
                     
                     <option value="NULL">Espace membre</option>
-                    <option value="inscription"><a href="sallea/inscription.php">Inscription</a></option>
+                    <option value="inscription"><a href="'. RACINE .'inscription.php">Inscription</a></option>
                     <option value="connexion"><a href="sallea/connexion.php">Connexion</a></option>
                     
-                    </select></li>';   
+                    </select></li>'; */  
 
+                    echo '<li><a href="'. RACINE .'inscription.php">Inscription</a></li>';
+                    echo '<li><a href="'. RACINE .'connexion.php">Connexion</a></li>';
                 }
 
                 if(internauteEstConnecteEtAdmim()){
 
-                    echo '
+                    /*echo '
                     <li>
                         <select name="admin" id="admin">
                             <option value="#"><a href="sallea/admin/salles">Gestion des salles</a></option>
@@ -51,15 +55,21 @@
                             <option value="#"><a href="sallea/admin/avis">Gestion des commandes</a></option>
                             <option value="#"><a href="sallea/admin/statistiques">Statistiques</a></option>               
                         </select>      
-                    </li>';
+                    </li>';*/
+
+                    echo '
+                    <li><a href="'. RACINE .'admin/salles">Gestion des salles</a></li>
+                    <li><a href="'. RACINE .'admin/produits">Gestion des produits</a></li>
+                    <li><a href="'. RACINE .'admin/membres">Gestion des membres</a></li>
+                    <li><a href="'. RACINE .'admin/commandes">Gestion des avis</a></li>
+                    <li><a href="'. RACINE .'admin/avis">Gestion des commandes</a></li>
+                    <li><a href="'. RACINE .'admin/statistiques">Statistiques</a></li>';
+
                 }
 
                 ?>
-            </ul>
-           
-        </nav>
-
-    
+            </ul>        
+        </nav>    
     </header>
     <main class="container">
     
